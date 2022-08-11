@@ -3,10 +3,10 @@
 include ("db.php");
 
 if(isset($_POST['saveTask'])){
-    $tittle = $_POST['title'];
+    $title = $_POST['title'];
     $description = $_POST['description'];
 
-    $query = "INSERT INTO task(title, description) VALUES('$tittle', '$description')";
+    $query = "INSERT INTO task(title, description) VALUES('$title', '$description')";
     $result = mysqli_query($conn, $query);
     if(!$result){
         die("Query failed");
